@@ -11,7 +11,7 @@ const Settings = () => {
                 <button type="submit">Ok</button>
                 <label >Ton budget</label>
                 <input id="music-choice"></input>
-                <Link to="/details"><button type="submit">J'y vais</button></Link>
+                <Link to="/Propositions"><button type="submit">J'y vais</button></Link>
  
               </form>
             </div>

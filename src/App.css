@@ -50,6 +50,16 @@
   text-align: center;
 }
 
+/* Css propositions */
+.proposition-bg {
+  background: url(proposition.jpg) no-repeat center top;
+  height: 100vh;
+  width: 100%;
+  background-size: 90%;
+}
+
+
+
 /* CSS détails */
 
 .preferences-container {
