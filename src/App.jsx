@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Settings from "./settings";
+import HomePage from "./HomePage";
 import Details from "./details";
 import Propositions from "./Propositions";
 
@@ -11,7 +11,7 @@ function App() {
        
         <div className="App">
           <Routes>
-            <Route exact path="/" element={<Settings />} />
+            <Route exact path="/" element={<HomePage />} />
             <Route exact path="/propositions" element={<Propositions />} />
           <Route path="/details" element={<Details />} />
           </Routes>
