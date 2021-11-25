@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Settings = () => {
    
@@ -10,7 +11,8 @@ const Settings = () => {
                 <button type="submit">Ok</button>
                 <label >Ton budget</label>
                 <input id="music-choice"></input>
-                <button type="submit">J'y vais</button>
+                <Link to="/details"><button type="submit">J'y vais</button></Link>
+ 
               </form>
             </div>
           );
