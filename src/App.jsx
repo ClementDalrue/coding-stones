@@ -1,6 +1,6 @@
 
 import './App.css'
-import Settings from './settings'
+import HomePage from './HomePage'
 import Details from './details'
 
 
@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div className="App">
-      <Settings />
+      <HomePage />
       <Details />
     </div>
   )
