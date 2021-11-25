@@ -1,16 +1,36 @@
 import React from "react";
-import test from "./test.png";
-import carte from "./carte.png";
+import { useState } from "react";
+import details from "./details.jpg";
+import Sydney from "./sydney.png";
+import londres from "./londres.png";
+import newyork from "./newyork.png";
+import mick from "./mick.jpeg";
 
 const Details = () => {
+  const [carte, setCarte] = useState(Sydney);
+  const [isLoading, setIsLoading] = useState(false);
+
+  function onCarteClick(ville) {
+    setIsLoading(true);
+    setTimeout(() => {
+      setCarte(ville);
+      setIsLoading(false);
+    }, 1000);
+  }
+
   return (
     <div className="details-container">
       <div className="details-header">
-        <img src={test} alt="" />
+        <img src={details} alt="" className="details-bg-img" />
         <h2>Mon parcours</h2>
         <div clasName="details-elements-container">
           <div className="carte-container"></div>
-          <img src={carte} alt="carte" className=""/>
+
+          {isLoading ? (
+            <p>chargement ...</p>
+          ) : (
+            <img src={carte} alt="carte" className="" />
+          )}
 
           <h3>Mes préférences</h3>
           <p>
@@ -21,12 +41,20 @@ const Details = () => {
           <form>
             <div className="preferences-container">
               <span>
-                <input type="checkbox" id="bars" />
+                <input
+                  onChange={() => onCarteClick(londres)}
+                  type="checkbox"
+                  id="bars"
+                />
                 <label for="bars">Bars</label>
               </span>
               <span>
-                <input type="checkbox" id="clubs" />
-                <label for="bars">Clubs</label>
+                <input
+                  onChange={() => setCarte(`${newyork}`)}
+                  type="checkbox"
+                  id="clubs"
+                />
+                <label for="clubs">Clubs</label>
               </span>
               <span>
                 <input type="checkbox" id="concerts" />

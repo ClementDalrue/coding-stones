@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const HomePage = () => {
    
@@ -54,7 +55,7 @@ const HomePage = () => {
                 id="budget"
                 placeholder="Votre budget"
                 />
-                <button className="homepage-form-button" type="submit">GO</button>
+                <Link to="/Propositions"><button className="homepage-form-button" type="submit">GO</button></Link>
               </form>
             </div>
           );
