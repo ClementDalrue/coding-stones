@@ -96,6 +96,38 @@ background: linear-gradient(135deg, rgba(250,212,33,1) 0%, rgba(231,59,26,1) 100
   background-size: 90%;
 }
 
+.proposition-btn {
+  font-size: 14px;
+  color: white;
+  position: absolute;
+  top: 481px;
+  height: 35px;
+  width: 158px;
+  border-radius: 30px;
+  border: none;
+  left: 592px;
+  font-weight: bold;
+text-align: center;
+}
+
+  .proposition-btn {background-image: linear-gradient(to right, #FF512F 0%, #F09819  51%, #FF512F  100%)}
+  .proposition-btn {
+     margin: 10px;
+     padding: 0px 0px;
+     text-align: center;
+     transition: 0.5s;
+     background-size: 200% auto;
+     color: white;            
+   }
+
+   .proposition-btn:hover {
+     background-position: right center; /* change the direction of the change here */
+     color: #fff;
+     text-decoration: none;
+   }
+  
+
+
 
 
 /* CSS détails */
@@ -117,3 +149,9 @@ background: linear-gradient(135deg, rgba(250,212,33,1) 0%, rgba(231,59,26,1) 100
     flex-direction: row;
     justify-content: space-around;
   }
+
+  /* CSS details */
+
+ .details-bg-img {
+   width: 100%;
+ }
