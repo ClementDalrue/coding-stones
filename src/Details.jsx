@@ -6,7 +6,14 @@ import londres from "./londres.png";
 import newyork from "./newyork.png";
 import mick from "./mick.jpeg";
 
-const activities=["Bars", "Clubs", "Concerts", "Musées", "Festivals", "opéra"];
+const activities = [
+  "Bars",
+  "Clubs",
+  "Concerts",
+  "Musées",
+  "Festivals",
+  "opéra",
+];
 
 const Details = () => {
   const [carte, setCarte] = useState(Sydney);
@@ -33,42 +40,39 @@ const Details = () => {
           ) : (
             <img src={carte} alt="carte" className="" />
           )}
-
-          <h3>Mes préférences</h3>
-          <p>
-            Pas tout à fait convaincu par le programme ? Tu peux personnaliser
-            encore plus ton voyage en sélectionnant ou en supprimant des types
-            d'expériences !{" "}
-          </p>
-          <form>
-          {activities.map((activitie) => (
-            <div className="preferences-container">
-              <span>
-                <input
-                  onChange={() => onCarteClick(londres)}
-                  type="checkbox"
-                  id={activitie}
-                />
-                <label for={activitie}>{activitie}</label>
-              </span>
-              <span>
-                <input
-                  onChange={() => setCarte(`${newyork}`)}
-                  type="checkbox"
-                  id={activitie}
-                />
-                <label for={activitie}>{activitie}</label>
-              </span>
-              <span>
-                <input type="checkbox" id={activitie} />
-                <label for={activitie}>{activitie}</label>
-              </span>
+          <div>
+            <h3>Mes préférences</h3>
+            <p>
+              Pas tout à fait convaincu par le programme ? Tu peux personnaliser
+              encore plus ton voyage en sélectionnant ou en supprimant des types
+              d'expériences !{" "}
+            </p>
             </div>
-          ))}
-            <div>
-              <button type="submit">Ok</button>
-            </div>
-          </form>
+            <form>
+              {activities.map((activitie) => (
+                <div className="preferences-container">
+                  <span>
+                    <input
+                      onChange={() => onCarteClick(londres)}
+                      type="checkbox"
+                      id={activitie}
+                    />
+                    <label for={activitie}>{activitie}</label>
+                  </span>
+                  <span>
+                    <input
+                      onChange={() => setCarte(`${newyork}`)}
+                      type="checkbox"
+                      id={activitie}
+                    />
+                    <label for={activitie}>{activitie}</label>
+                  </span>
+                </div>
+              ))}
+              <div>
+                <button type="submit">Ok</button>
+              </div>
+            </form>
         </div>
       </div>
     </div>
