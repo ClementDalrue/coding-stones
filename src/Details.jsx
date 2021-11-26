@@ -6,6 +6,8 @@ import londres from "./londres.png";
 import newyork from "./newyork.png";
 import mick from "./mick.jpeg";
 
+const activities=["Bars", "Clubs", "Concerts", "Musées", "Festivals", "opéra"];
+
 const Details = () => {
   const [carte, setCarte] = useState(Sydney);
   const [isLoading, setIsLoading] = useState(false);
@@ -21,7 +23,7 @@ const Details = () => {
   return (
     <div className="details-container">
       <div className="details-header">
-        <img src={details} alt="" className="details-bg-img" />
+        <img src={Details} alt="" className="details-bg-img" />
         <h2>Mon parcours</h2>
         <div clasName="details-elements-container">
           <div className="carte-container"></div>
@@ -39,40 +41,30 @@ const Details = () => {
             d'expériences !{" "}
           </p>
           <form>
+          {activities.map((activitie) => (
             <div className="preferences-container">
               <span>
                 <input
                   onChange={() => onCarteClick(londres)}
                   type="checkbox"
-                  id="bars"
+                  id={activitie}
                 />
-                <label for="bars">Bars</label>
+                <label for={activitie}>{activitie}</label>
               </span>
               <span>
                 <input
                   onChange={() => setCarte(`${newyork}`)}
                   type="checkbox"
-                  id="clubs"
+                  id={activitie}
                 />
-                <label for="clubs">Clubs</label>
+                <label for={activitie}>{activitie}</label>
               </span>
               <span>
-                <input type="checkbox" id="concerts" />
-                <label for="concerts">Concerts</label>
-              </span>
-              <span>
-                <input type="checkbox" id="musees" />
-                <label for="concerts">Musées</label>
-              </span>
-              <span>
-                <input type="checkbox" id="festivals" />
-                <label for="concerts">Festivals</label>
-              </span>
-              <span>
-                <input type="checkbox" id="opera" />
-                <label for="concerts">Opéra</label>
+                <input type="checkbox" id={activitie} />
+                <label for={activitie}>{activitie}</label>
               </span>
             </div>
+          ))}
             <div>
               <button type="submit">Ok</button>
             </div>
