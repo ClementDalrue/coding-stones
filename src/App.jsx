@@ -4,6 +4,7 @@ import HomePage from "./HomePage";
 import Details from "./Details";
 import Propositions from "./Propositions";
 
+
 function App() {
   return (
     <BrowserRouter>
