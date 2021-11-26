@@ -1,42 +1,45 @@
 import React from "react";
 import { useState } from "react";
-import Detail from "./details.jpg";
-import Sydney from "./sydney.png";
-import londres from "./londres.png";
-import newyork from "./newyork.png";
+import Detail from "./detail2.jpg";
+import london1 from "./london1.png";
+import london2 from "./london2.png";
+
 import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const activities = [
-  {
-    label: "Bars",
-    image: londres,
-  },
-  {
-    label: "Clubs",
-    image: newyork,
-  },
-  {
-    label: "Concerts",
-    image: Sydney,
-  },
-  {
-    label: "Musées",
-    image: londres,
-  },
-  {
-    label: "Festivals",
-    image: londres,
-  },
-  {
-    label: "Opéras",
-    image: londres,
-  },
-];
+    {
+      label: "Studios",
+      image: london1,
+    },
+    {
+      label: "Clubs",
+      image: london2,
+    },
+    {
+      label: "Concerts",
+      image: london1,
+    },
+    {
+      label: "Bars",
+      image: london2,
+    },
+    {
+      label: "Festivals",
+      image: london1,
+    },
+    {
+      label: "Opéras",
+      image: london2,
+    },
+  ];
+  
 
-const Details = () => {
-  const [carte, setCarte] = useState(Sydney);
+
+
+const DetailsLondon = () => {
+  const [carte, setCarte] = useState(london1);
   const [isLoading, setIsLoading] = useState(false);
   const [selectedActivities, setSelectedActivities] = useState(activities);
 
@@ -52,23 +55,24 @@ const Details = () => {
     <div className="details-container">
       <div className="details-header">
         <img src={Detail} alt="" className="details-bg-img" />
-
+       
         <div className="details-elements-container">
           <div className="carte-container">
-            {isLoading ? (
-              <div className="flou">
-                <Box className="loading" sx={{ display: "flex" }}>
-                  <CircularProgress />
-                </Box>
-              </div>
-            ) : (
-              <img src={carte} alt="carte" className="" />
-            )}
-          </div>
 
+          {isLoading ? (
+            <div className="flou2">
+            <Box className="loading" sx={{ display: 'flex' }}>
+            <CircularProgress />
+          </Box>
+          </div>
+          ) : (
+            <img src={carte} alt="carte" className="" />
+          )}
+        </div>
+          
           <form>
             <div className="preferences-container">
-              {activities.map((activity) => (
+            {activities.map((activity) => (
                 <span>
                   <input
                     onChange={(e) => {
@@ -90,17 +94,19 @@ const Details = () => {
                   <label for="bars">{ activity.label }</label>
                 </span>
               ))}
+             
+               
             </div>
           </form>
+          
+      </div>
+    </div>
+    <div className="proposition-bg1">
+      
+      <Link to="/Propositions" className="proposition-btn">Voir un autre voyage</Link>
         </div>
-      </div>
-      <div className="proposition-bg1">
-        <Link to="/Propositions" className="proposition-btn">
-          Voir un autre voyage
-        </Link>
-      </div>
     </div>
   );
 };
 
-export default Details;
+export default DetailsLondon;

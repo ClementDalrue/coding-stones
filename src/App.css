@@ -148,10 +148,114 @@ text-align: center;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    height: 100%;
   }
 
-  /* CSS details */
 
  .details-bg-img {
    width: 100%;
+ }
+
+ .flou {
+  background: url(/src/flou.png) no-repeat center center;
+  height: 492px;
+  width: 100%;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+ }
+
+
+ .flou2 {
+  background: url(/src/floulondon.png) no-repeat center center;
+  height: 492px;
+  width: 100%;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+ }
+ 
+
+ .proposition-btn.proposition-btn2 {
+  left: 222px;
+ }
+ .proposition-btn.proposition-btn3 {
+  left: 965px;
+ }
+
+ .details-elements-container {
+  height: 490px;
+    position: absolute;
+    overflow: hidden;
+    width: 1500px;
+    top: 893px;
+    left: 159px;
+ }
+
+ .details-elements-container img {
+  width: 126%;
+ }
+
+ .carte-container{
+  width: 692px;
+  overflow: hidden;
+  border-radius: 30px 0 0 30px;
+  position: relative;
+ }
+
+ .loading{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 50px;
+    height: 50px;
+    z-index: 10;
+ }
+
+ .details-elements-container form {
+  position: absolute;
+  right: 304px;
+  z-index: 5;
+  height: 100%;
+  width: 296px;
+  box-sizing: border-box;
+  background: #ededed;
+  top: 0;
+  border-radius: 0 30px 30px 0;
+ }
+
+ .preferences-container span {
+   display: block;
+   padding:15px 30px;
+  border-bottom:1px solid #d5d5d5;
+ }
+
+ .preferences-container label, .preferences-container input {
+   cursor: pointer;
+ }
+
+
+ .proposition-bg1 {
+  position: absolute;
+  top: 1200px;
+  width: 200px;
+  margin: 0 auto;
+  height: 40px;
+  left: 0;
+  z-index: 20;
+ }
+
+ .proposition-bg1 a {
+  text-decoration: none;
+  line-height: 37px;
+  vertical-align: middle;
+  width: 100%;
+ }
+
+ .details-container {
+  overflow-x: hidden;
+  position: relative;
  }

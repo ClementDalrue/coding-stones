@@ -16,7 +16,7 @@ const HomePage = () => {
         <form className="homepage-form">
           <div className="homepage-form-container">
             {musicGenres.map((genre) => (
-              <div className={`homepage-form-toggle ${selectedGenre === genre ? 'selected-chart' : ''}`}>
+              <div key={genre} className={`homepage-form-toggle ${selectedGenre === genre ? 'selected-chart' : ''}`}>
                 <label htmlFor={genre}>{genre}</label>
                 <input
                   className="homepage-form-input"

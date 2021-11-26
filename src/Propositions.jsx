@@ -6,6 +6,8 @@ const Propositions = () => {
     <div className="proposition-bg">
       
       <Link to="/details"><button className="proposition-btn">+ Détail</button></Link>
+      <Link to="/detailslondon"><button className="proposition-btn proposition-btn2">+ Détail</button></Link>
+      <button className="proposition-btn proposition-btn3">+ Détail</button>
     </div>
   );
 };
