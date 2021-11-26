@@ -5,6 +5,7 @@ import Details from "./Details";
 import DetailsLondon from "./DetailsLondon"
 import Propositions from "./Propositions";
 
+
 function App() {
   return (
     <BrowserRouter>

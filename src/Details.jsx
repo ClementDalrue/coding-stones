@@ -9,6 +9,7 @@ import Box from "@mui/material/Box";
 import { Link } from "react-router-dom";
 
 const activities = [
+
   {
     label: "Bars",
     image: londres,
@@ -53,6 +54,7 @@ const Details = () => {
       <div className="details-header">
         <img src={Detail} alt="" className="details-bg-img" />
 
+
         <div className="details-elements-container">
           <div className="carte-container">
             {isLoading ? (
@@ -90,8 +92,44 @@ const Details = () => {
                   <label for="bars">{ activity.label }</label>
                 </span>
               ))}
+          {isLoading ? (
+            <p>chargement ...</p>
+          ) : (
+            <img src={carte} alt="carte" className="" />
+          )}
+          <div>
+            <h3>Mes préférences</h3>
+            <p>
+              Pas tout à fait convaincu par le programme ? Tu peux personnaliser
+              encore plus ton voyage en sélectionnant ou en supprimant des types
+              d'expériences !{" "}
+            </p>
             </div>
-          </form>
+            <form>
+              {activities.map((activitie) => (
+                <div className="preferences-container">
+                  <span>
+                    <input
+                      onChange={() => onCarteClick(londres)}
+                      type="checkbox"
+                      id={activitie}
+                    />
+                    <label for={activitie}>{activitie}</label>
+                  </span>
+                  <span>
+                    <input
+                      onChange={() => setCarte(`${newyork}`)}
+                      type="checkbox"
+                      id={activitie}
+                    />
+                    <label for={activitie}>{activitie}</label>
+                  </span>
+                </div>
+              ))}
+              <div>
+                <button type="submit">Ok</button>
+              </div>
+            </form>
         </div>
       </div>
       <div className="proposition-bg1">

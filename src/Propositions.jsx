@@ -1,4 +1,5 @@
 import React from "react";
+import Chatbot from "react-chatbot-kit";
 import { Link } from "react-router-dom";
 
 const Propositions = () => {
